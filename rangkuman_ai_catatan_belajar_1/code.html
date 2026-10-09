@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "surface-container-high": "#d2edf3",
+        "on-primary-container": "#8bc6c0",
+        "error": "#ba1a1a",
+        "on-primary-fixed": "#00201e",
+        "on-tertiary-fixed": "#00210b",
+        "surface-container-highest": "#cde7ee",
+        "primary-fixed-dim": "#96d2cb",
+        "error-container": "#ffdad6",
+        "on-secondary-container": "#0d704e",
+        "tertiary-fixed": "#bdefc3",
+        "on-secondary-fixed-variant": "#005237",
+        "surface-bg": "#F9FBFB",
+        "emerald-accent": "#2A835F",
+        "secondary-fixed": "#9df4c9",
+        "secondary-fixed-dim": "#82d8ae",
+        "surface": "#effcff",
+        "on-secondary": "#ffffff",
+        "inverse-on-surface": "#dbf5fc",
+        "surface-dim": "#c4dfe5",
+        "status-success": "#1B7E5A",
+        "on-primary": "#ffffff",
+        "surface-container-lowest": "#ffffff",
+        "surface-container": "#d8f3f9",
+        "on-surface": "#051f24",
+        "primary-fixed": "#b1eee7",
+        "on-error": "#ffffff",
+        "outline": "#707977",
+        "surface-tint": "#2b6862",
+        "on-surface-variant": "#3f4947",
+        "border-subtle": "#E1EAE7",
+        "tertiary-fixed-dim": "#a1d2a8",
+        "on-secondary-fixed": "#002114",
+        "on-primary-fixed-variant": "#0a504b",
+        "on-tertiary-fixed-variant": "#23502f",
+        "on-tertiary": "#ffffff",
+        "primary-container": "#12544f",
+        "status-error": "#C93B3B",
+        "status-warning": "#D9822B",
+        "mint-subtle": "#EBF4F0",
+        "on-error-container": "#93000a",
+        "on-tertiary-container": "#96c79d",
+        "inverse-surface": "#1c3439",
+        "primary": "#003c38",
+        "inverse-primary": "#96d2cb",
+        "outline-variant": "#bfc8c6",
+        "tertiary": "#0e3d1e",
+        "background": "#effcff",
+        "surface-container-low": "#def8ff",
+        "tertiary-container": "#285433",
+        "surface-variant": "#cde7ee",
+        "deep-teal": "#12544F",
+        "secondary": "#026c4a",
+        "secondary-container": "#9bf1c6",
+        "abyssal-slate": "#092328",
+        "on-background": "#051f24",
+        "surface-bright": "#effcff",
+        "soft-mint": "#8BBB92",
+        "surface-card": "#FFFFFF"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-xl": "2.5rem",
+        "margin-mobile": "1rem",
+        "space-sm": "0.5rem",
+        "margin": "2rem",
+        "space-xs": "0.25rem",
+        "gutter-mobile": "1rem",
+        "space-lg": "1.5rem",
+        "space-md": "1rem",
+        "gutter": "1.5rem"
+      },
+      "fontFamily": {
+        "body-md": ["Plus Jakarta Sans"],
+        "label-md": ["Plus Jakarta Sans"],
+        "display-hero-mobile": ["Plus Jakarta Sans"],
+        "headline-sm": ["Plus Jakarta Sans"],
+        "label-lg": ["Plus Jakarta Sans"],
+        "headline-lg": ["Plus Jakarta Sans"],
+        "label-sm": ["Plus Jakarta Sans"],
+        "body-sm": ["Plus Jakarta Sans"],
+        "headline-lg-mobile": ["Plus Jakarta Sans"],
+        "display-hero": ["Plus Jakarta Sans"],
+        "body-lg": ["Plus Jakarta Sans"],
+        "headline-md": ["Plus Jakarta Sans"]
+      },
+      "fontSize": {
+        "body-md": ["14px", {"lineHeight": "22px", "fontWeight": "400"}],
+        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+        "display-hero-mobile": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+        "headline-sm": ["16px", {"lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600"}],
+        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+        "headline-lg": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+        "label-sm": ["10px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+        "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}],
+        "headline-lg-mobile": ["22px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "display-hero": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "body-lg": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+        "headline-md": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+      }
+    }
+  }
+}</script></head><body class="bg-surface-bg font-body-md text-on-surface antialiased selection:bg-mint-subtle selection:text-deep-teal"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-card shadow-[0_1px_8px_rgba(9,35,40,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-card"><img alt="Catatan Ujian Pintar Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXaXRLpDjvKbK3tEb73pL4qqHH3j1ZTxRt3m48UbjQgAgyTFdBFfBMnqYinZrQOZtN-4MZB263p_npbVus2V6seARkCvCfGXIvGoGpBU6utaRjvlVado2gldApMM46Bcm1ZUnM7sRvYRf-iYkj7HyoPAi4_OzbE-lX3tPQFEr83o8X4x-LnfIwifOsQxZTcg175QCagpXfElq9qVp-ZQEOjhFFsxikwTEyLVzqYrlW4pvYs6kKFifR"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-abyssal-slate tracking-tight">Catatan Ujian</span><span class="font-label-sm text-label-sm text-emerald-accent -mt-space-xs">Pintar Platform</span></div></div><div class="px-space-md pt-space-sm pb-space-xs"><button class="w-full flex items-center justify-between px-space-md py-space-sm rounded-lg bg-surface text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" type="button"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-outline text-[18px]">search</span><span class="font-body-sm text-body-sm">Cari catatan / soal...</span></div><kbd class="px-1.5 py-0.5 rounded bg-surface-card text-on-surface-variant font-label-sm text-label-sm shadow-[0_1px_2px_rgba(9,35,40,0.06)]">⌘K</kbd></button></div><nav class="flex flex-col gap-space-xs px-space-md mt-space-sm" data-active-classes="bg-mint-subtle text-deep-teal font-label-lg rounded-lg shadow-[0_1px_4px_rgba(18,84,79,0.06)]"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-mint-subtle hover:text-deep-teal transition-all font-body-md text-body-md" data-path="dashboard-ringkasan" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard / Ringkasan</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-mint-subtle hover:text-deep-teal transition-all font-body-md text-body-md" data-path="materi-belajar" href="#"><span class="material-symbols-outlined text-[20px]">folder_open</span><span>Materi Belajar</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-mint-subtle hover:text-deep-teal transition-all font-body-md text-body-md" data-path="rangkuman-dan-catatan" href="#"><span class="material-symbols-outlined text-[20px]">auto_awesome</span><span>Rangkuman &amp; Catatan</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-mint-subtle hover:text-deep-teal transition-all font-body-md text-body-md" data-path="soal-latihan" href="#"><span class="material-symbols-outlined text-[20px]">assignment_turned_in</span><span>Soal Latihan</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-mint-subtle hover:text-deep-teal transition-all font-body-md text-body-md" data-path="jadwal-belajar" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span>Jadwal Belajar</span></a></nav></div><div class="p-space-md flex flex-col gap-space-xs bg-surface-card"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-mint-subtle text-deep-teal font-label-lg rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-mint-subtle hover:text-deep-teal transition-all font-body-md text-body-md" data-path="pengaturan" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Pengaturan</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-status-error hover:bg-error-container hover:text-on-error-container transition-all font-body-md text-body-md" data-path="login" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span>Keluar</span></a></nav><div class="mt-space-sm p-space-sm rounded-xl bg-surface flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-status-success animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Mode Fokus Aktif</span></div><span class="font-label-sm text-label-sm text-emerald-accent font-semibold">v2.4</span></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-card/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(9,35,40,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><nav class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><span class="hover:text-deep-teal cursor-pointer">Akademik</span><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><span class="font-label-md text-label-md text-abyssal-slate">Portal Belajar</span></nav><div class="h-4 w-[1px] bg-border-subtle hidden sm:block"></div><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-mint-subtle"><span class="material-symbols-outlined text-deep-teal text-[16px]">alarm</span><span class="font-label-md text-label-md text-deep-teal">UTBK / Ujian Akhir:</span><span class="font-label-md text-label-md text-emerald-accent font-bold">14 Hari Lagi</span></div></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-space-xs px-space-md h-10 rounded-lg bg-deep-teal hover:bg-abyssal-slate text-on-primary font-label-lg text-label-lg shadow-[0_2px_8px_-2px_rgba(18,84,79,0.25)] transition-all" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Tambah Materi</span></button><button class="relative w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface hover:text-on-surface transition-all" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-status-error ring-2 ring-surface-card"></span></button><div class="h-6 w-[1px] bg-border-subtle"></div><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-soft-mint" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkWR1s55UeQ8-UkpZwtyi8eroCKlr0y5d7tyE0b27i7DiFqdzfRcYBDkl6oTfiA_TsC3A3-LN73gUDmP8lvmL7CbnLj8c1NOC7zIWYeATnwgMxmWEjvMxreGg5vJIG0sODnTAyvvuOIqbjDuXrdGfMoXA9bYD4YE37t1Ea-1I56uFXOySlICEqALhQupMEydBkxeDp-q8YnI6hA5-hu1ta8GClMsO0_y_GMAUGMBof7H64XvTw3Xvo"/><div class="hidden xl:flex flex-col text-left"><span class="font-label-md text-label-md text-abyssal-slate leading-tight">Rian Pratama</span><span class="font-label-sm text-label-sm text-emerald-accent">Mahasiswa</span></div></div></div></header><main class="relative pt-16 w-full flex-1 bg-surface-bg px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Top Workspace Actions & Header Utility Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md mb-space-lg bg-surface-card p-space-md rounded-xl shadow-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs text-emerald-accent font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+<span>FR-02 &amp; FR-03 • AI Synthesis Studio</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-abyssal-slate mt-0.5">Rangkuman AI &amp; Editor Catatan Belajar</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sintesis materi kuliah otomatis dengan dukungan catatan pribadi cerdas &amp; bank soal instan.</p>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs sm:gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-mint-subtle text-deep-teal font-label-md text-label-md hover:bg-surface-container transition-all" id="btn-export-pdf" type="button">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+<span>Ekspor PDF</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md hover:bg-surface-container-highest transition-all" id="btn-save-note" type="button">
+<span class="material-symbols-outlined text-[18px]">bookmark_added</span>
+<span id="save-status-text">Simpan Catatan</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-deep-teal text-on-primary font-label-md text-label-md hover:bg-abyssal-slate shadow-sm transition-all" id="btn-generate-quiz" type="button">
+<span class="material-symbols-outlined text-[18px]">quiz</span>
+<span>Generate Soal dari Catatan Ini</span>
+</button>
+</div>
+</div>
+<!-- Workspace Dual Split: Left Control vs Center/Right Canvas -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT PANEL: Source & AI Synthesis Engine (col-span-4) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Source Selection Widget -->
+<div class="bg-surface-card p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-deep-teal text-[20px]">layers</span>
+<span class="font-headline-sm text-headline-sm text-abyssal-slate">Sumber Materi</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-mint-subtle text-deep-teal font-label-sm text-label-sm">2 Terhubung</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Pilih berkas kuliah atau rekaman audio yang menjadi rujukan AI.</p>
+<!-- Multi-select Items -->
+<div class="flex flex-col gap-space-xs mt-1">
+<!-- Item 1: Active -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-mint-subtle text-deep-teal">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-[20px] text-emerald-accent">picture_as_pdf</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md truncate">Kalkulus Integral_Bab 4.pdf</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">42 Halaman • Dosen: Prof. Suhartono</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-status-success text-[18px]">check_circle</span>
+</div>
+<!-- Item 2: Active secondary -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface text-on-surface">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-[20px] text-soft-mint">description</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md truncate">Catatan Kuliah Minggu Ke-7.docx</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Catatan Manual Tulisan Tangan</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-status-success text-[18px]">check_circle</span>
+</div>
+<!-- Item 3: Add more -->
+<button class="flex items-center justify-center gap-space-xs p-2 rounded-lg bg-surface-container-low text-deep-teal hover:bg-surface-container font-label-sm text-label-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span>Tautkan Dokumen / Slide Tambahan</span>
+</button>
+</div>
+</div>
+<!-- AI Configuration Engine -->
+<div class="bg-surface-card p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-emerald-accent text-[22px]">tune</span>
+<span class="font-headline-sm text-headline-sm text-abyssal-slate">Konfigurasi Rangkuman AI</span>
+</div>
+<!-- Slider Panjang Rangkuman -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-abyssal-slate">Panjang Rangkuman</label>
+<span class="font-label-sm text-label-sm text-emerald-accent bg-mint-subtle px-2 py-0.5 rounded-full" id="length-label">Seimbang (Sedang)</span>
+</div>
+<input class="w-full h-1.5 bg-surface-container-high rounded-lg appearance-none cursor-pointer accent-deep-teal" id="summary-length-slider" max="3" min="1" type="range" value="2"/>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant px-0.5">
+<span>Ringkas</span>
+<span>Seimbang</span>
+<span>Mendalam</span>
+</div>
+</div>
+<!-- Pilihan Gaya Rangkuman -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-abyssal-slate">Model &amp; Format Paparan</label>
+<div class="grid grid-cols-1 gap-space-xs" id="style-selector-group">
+<label class="cursor-pointer flex items-start gap-space-sm p-space-sm rounded-lg bg-mint-subtle transition-all">
+<input checked="" class="mt-1 accent-deep-teal" name="summary-style" type="radio" value="bullet"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-deep-teal">Poin-poin Penting &amp; Definisi</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cocok untuk hafalan kilat sebelum kuis mingguan.</span>
+</div>
+</label>
+<label class="cursor-pointer flex items-start gap-space-sm p-space-sm rounded-lg bg-surface hover:bg-surface-container-low transition-all">
+<input class="mt-1 accent-deep-teal" name="summary-style" type="radio" value="narrative"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Naratif Komprehensif</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Penjelasan runtut konsep sulit dengan analogi nyata.</span>
+</div>
+</label>
+<label class="cursor-pointer flex items-start gap-space-sm p-space-sm rounded-lg bg-surface hover:bg-surface-container-low transition-all">
+<input class="mt-1 accent-deep-teal" name="summary-style" type="radio" value="flashcard"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Flashcard / Tanya Jawab Konsep</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Format Active Recall dengan prompt pertanyaan kunci.</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Fokus Spesifik Input -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-abyssal-slate">Fokus Bahasan Tambahan (Opsional)</label>
+<input class="w-full px-3 py-2 rounded-lg bg-surface text-on-surface font-body-sm text-body-sm focus:outline-none" placeholder="Misal: Penurunan rumus substitusi trigonometri..." type="text"/>
+</div>
+<!-- Tombol Aksi AI -->
+<button class="w-full py-3 px-space-md rounded-lg bg-deep-teal text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-space-xs hover:bg-abyssal-slate transition-all shadow-md group" id="btn-refresh-ai" type="button">
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:rotate-180">sync</span>
+<span>Perbarui Rangkuman AI</span>
+</button>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-status-success"></span>
+            Model: PintarSynthesizer-4.2
+          </span>
+<span>Konsumsi: 1 Token Belajar</span>
+</div>
+</div>
+<!-- Quick Metrics Mini Card -->
+<div class="bg-surface-container p-space-md rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-card flex items-center justify-center text-deep-teal shadow-sm">
+<span class="material-symbols-outlined text-[22px]">timer</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-abyssal-slate">12 Menit</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Estimasi Waktu Baca Ulang</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-headline-sm text-headline-sm text-emerald-accent">94%</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Skor Retensi Inti</div>
+</div>
+</div>
+</div>
+<!-- CENTER & RIGHT PANEL: Rich Interactive Note Canvas (col-span-8) -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<!-- Interactive Editor Container -->
+<div class="bg-surface-card rounded-xl shadow-sm flex flex-col">
+<!-- Rich Text & Annotation Toolbar -->
+<div class="flex flex-wrap items-center justify-between gap-space-xs p-space-sm bg-surface rounded-t-xl">
+<div class="flex flex-wrap items-center gap-1">
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:bg-mint-subtle hover:text-deep-teal transition-colors" title="Tebal (Ctrl+B)" type="button">
+<span class="material-symbols-outlined text-[18px]">format_bold</span>
+</button>
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:bg-mint-subtle hover:text-deep-teal transition-colors" title="Miring (Ctrl+I)" type="button">
+<span class="material-symbols-outlined text-[18px]">format_italic</span>
+</button>
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:bg-mint-subtle hover:text-deep-teal transition-colors" title="Daftar Poin" type="button">
+<span class="material-symbols-outlined text-[18px]">format_list_bulleted</span>
+</button>
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:bg-mint-subtle hover:text-deep-teal transition-colors" title="Daftar Nomor" type="button">
+<span class="material-symbols-outlined text-[18px]">format_list_numbered</span>
+</button>
+<div class="w-px h-5 bg-border-subtle mx-1"></div>
+<button class="flex items-center gap-1 px-2 h-8 rounded bg-mint-subtle text-deep-teal hover:bg-soft-mint/30 transition-colors font-label-sm text-label-sm" id="btn-highlight" title="Sorot Teks Mint" type="button">
+<span class="material-symbols-outlined text-[16px]">ink_highlighter</span>
+<span>Stabilo Mint</span>
+</button>
+<button class="flex items-center gap-1 px-2 h-8 rounded text-on-surface-variant hover:bg-mint-subtle hover:text-deep-teal transition-colors font-label-sm text-label-sm" title="Sisipkan Rumus Matematika" type="button">
+<span class="material-symbols-outlined text-[16px]">functions</span>
+<span>LaTeX / Math</span>
+</button>
+<button class="flex items-center gap-1 px-2 h-8 rounded text-on-surface-variant hover:bg-mint-subtle hover:text-deep-teal transition-colors font-label-sm text-label-sm" title="Blok Catatan Pribadi" type="button">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+<span>Catatan Sendiri</span>
+</button>
+</div>
+<!-- Document Meta Pills -->
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-deep-teal font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">link</span>
+<span>Kalkulus Integral.pdf (Hal 18-29)</span>
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-mint-subtle text-status-success font-label-sm text-label-sm" id="sync-badge">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success animate-ping"></span>
+<span>Tersinkronisasi</span>
+</span>
+</div>
+</div>
+<!-- Main Editable Workspace Sheet -->
+<div class="p-space-lg flex flex-col gap-space-lg">
+<!-- Editable Note Header -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">Matematika Dasar II</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• Terakhir disunting: Hari ini, 10:42 WIB</span>
+</div>
+<input class="font-headline-lg text-headline-lg text-abyssal-slate bg-transparent focus:outline-none focus:bg-surface-container-low rounded px-1 -mx-1 transition-colors font-bold" type="text" value="Ringkasan Inti Kalkulus: Aturan Rantai &amp; Integral Substitusi"/>
+</div>
+<!-- Key Concept Cards (Structured AI Output) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Concept 1 -->
+<div class="p-space-md rounded-xl bg-surface flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-emerald-accent uppercase">Konsep Kunci 01</span>
+<span class="material-symbols-outlined text-[18px] text-emerald-accent">verified</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-abyssal-slate mb-1">Prinsip Aturan Rantai (Chain Rule)</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Digunakan untuk mencari turunan dari fungsi komposisi <code class="px-1.5 py-0.5 rounded bg-surface-container text-deep-teal font-mono">f(g(x))</code>. Rumus pokok menyatakan bahwa turunan luar dikalikan turunan dalam.
+                </p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-deep-teal font-label-sm text-label-sm">
+<span class="font-mono bg-mint-subtle px-2 py-1 rounded">dy/dx = (dy/du) × (du/dx)</span>
+<button class="text-on-surface-variant hover:text-deep-teal" title="Buka di PDF Sumber" type="button">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Concept 2 -->
+<div class="p-space-md rounded-xl bg-surface flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-emerald-accent uppercase">Konsep Kunci 02</span>
+<span class="material-symbols-outlined text-[18px] text-emerald-accent">verified</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-abyssal-slate mb-1">Metode Substitusi Integral (U-Sub)</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Analog dari kebalikan aturan rantai dalam integrasi. Tujuannya mentransformasikan integral rumit ke dalam variabel baru <code class="px-1.5 py-0.5 rounded bg-surface-container text-deep-teal font-mono">u</code> yang lebih sederhana.
+                </p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-deep-teal font-label-sm text-label-sm">
+<span class="font-mono bg-mint-subtle px-2 py-1 rounded">∫ f(g(x))g'(x) dx = ∫ f(u) du</span>
+<button class="text-on-surface-variant hover:text-deep-teal" title="Buka di PDF Sumber" type="button">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Formula Matrix Reference Section -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-abyssal-slate">Tabel Rujukan Formula Cepat Ujian</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sering keluar di Ujian Akhir Semester</span>
+</div>
+<div class="overflow-x-auto rounded-xl bg-surface">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container text-deep-teal font-label-md text-label-md">
+<tr>
+<th class="py-2.5 px-4">Tipe Bentuk Integral</th>
+<th class="py-2.5 px-4">Pemilihan Variabel (u)</th>
+<th class="py-2.5 px-4">Turunan (du)</th>
+<th class="py-2.5 px-4">Bentuk Akhir Substitusi</th>
+</tr>
+</thead>
+<tbody class="text-on-surface divide-y divide-border-subtle/0">
+<tr class="hover:bg-mint-subtle/50 transition-colors">
+<td class="py-2.5 px-4 font-mono">∫ 2x √(x² + 1) dx</td>
+<td class="py-2.5 px-4"><span class="px-2 py-0.5 rounded bg-surface-card font-mono text-deep-teal">u = x² + 1</span></td>
+<td class="py-2.5 px-4 font-mono">du = 2x dx</td>
+<td class="py-2.5 px-4 font-semibold text-deep-teal font-mono">∫ √u du = 2/3 u^(3/2) + C</td>
+</tr>
+<tr class="hover:bg-mint-subtle/50 transition-colors bg-surface-card/40">
+<td class="py-2.5 px-4 font-mono">∫ (cos x) e^(sin x) dx</td>
+<td class="py-2.5 px-4"><span class="px-2 py-0.5 rounded bg-surface-card font-mono text-deep-teal">u = sin x</span></td>
+<td class="py-2.5 px-4 font-mono">du = cos x dx</td>
+<td class="py-2.5 px-4 font-semibold text-deep-teal font-mono">∫ e^u du = e^(sin x) + C</td>
+</tr>
+<tr class="hover:bg-mint-subtle/50 transition-colors">
+<td class="py-2.5 px-4 font-mono">∫ (3x²) / (x³ + 5) dx</td>
+<td class="py-2.5 px-4"><span class="px-2 py-0.5 rounded bg-surface-card font-mono text-deep-teal">u = x³ + 5</span></td>
+<td class="py-2.5 px-4 font-mono">du = 3x² dx</td>
+<td class="py-2.5 px-4 font-semibold text-deep-teal font-mono">∫ 1/u du = ln|x³ + 5| + C</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Highlighted High-Priority Takeaway Box (Callout) -->
+<div class="p-space-md rounded-xl bg-mint-subtle flex flex-col sm:flex-row gap-space-md items-start">
+<div class="w-10 h-10 rounded-full bg-deep-teal text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">lightbulb</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-headline-sm text-headline-sm text-deep-teal font-bold">Catatan Penting untuk Ujian Semester</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                Jangan pernah lupa mengembalikan nilai variabel <code class="px-1.5 py-0.2 rounded bg-surface-card font-semibold text-deep-teal">u</code> ke dalam representasi awal <code class="px-1.5 py-0.2 rounded bg-surface-card font-semibold text-deep-teal">x</code> ketika mengerjakan soal integral tak tentu. Jika integral memiliki batas (integral tentu), pastikan batas integral <span class="bg-soft-mint/40 px-1 rounded font-medium">dikonversi sesuai nilai substitusi baru</span> sebelum dihitung!
+              </p>
+<div class="flex items-center gap-space-sm mt-1">
+<span class="font-label-sm text-label-sm text-emerald-accent flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span> Terverifikasi dari Silabus Prodi 2024
+                </span>
+</div>
+</div>
+</div>
+<!-- Personal Interactive Student Notes Block -->
+<div class="p-space-md rounded-xl bg-surface flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-abyssal-slate font-label-lg text-label-lg">
+<span class="material-symbols-outlined text-deep-teal text-[20px]">person_edit</span>
+<span>Catatan Pribadi Rian (Dapat Diedit Langsung)</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Auto-saved</span>
+</div>
+<textarea class="w-full p-space-sm rounded-lg bg-surface-card text-on-surface font-body-md text-body-md focus:outline-none resize-none leading-relaxed" placeholder="Tambahkan trik pengerjaan atau kisi-kisi dari dosenmu di sini..." rows="3">Catatan dosen saat sesi review: Soal nomor 3 UAS kemungkinan memadukan integral substitusi dengan fungsi pecahan rasional parsial. Perlu latihan 5 soal tipe latihan 4.3 halaman 24 malam ini.</textarea>
+</div>
+</div>
+</div>
+<!-- Revision History & Cross-link Side Drawer Module -->
+<div class="bg-surface-card rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-deep-teal text-[20px]">history</span>
+<span class="font-headline-sm text-headline-sm text-abyssal-slate">Riwayat Revisi &amp; Tautan Sumber Asli</span>
+</div>
+<button class="text-emerald-accent font-label-sm text-label-sm hover:underline" id="toggle-history-btn" type="button">
+            Tampilkan Lengkap (4)
+          </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm pt-1">
+<!-- Rev 1 -->
+<div class="p-space-sm rounded-lg bg-surface flex flex-col gap-1 hover:bg-mint-subtle transition-colors cursor-pointer">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-deep-teal">Versi AI v2.4 (Terkini)</span>
+<span class="text-status-success font-label-sm text-label-sm">Aktif</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hari ini, 10:42 • 850 kata</span>
+<span class="font-label-sm text-label-sm text-emerald-accent flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span> Lihat cuplikan
+            </span>
+</div>
+<!-- Rev 2 -->
+<div class="p-space-sm rounded-lg bg-surface flex flex-col gap-1 hover:bg-mint-subtle transition-colors cursor-pointer">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">Versi AI v2.1</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Disimpan</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Kemarin, 19:15 • 620 kata</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">restore</span> Pulihkan versi ini
+            </span>
+</div>
+<!-- Rev 3 -->
+<div class="p-space-sm rounded-lg bg-surface flex flex-col gap-1 hover:bg-mint-subtle transition-colors cursor-pointer">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">Draf Awal Sintesis</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Arsip</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">2 Hari lalu • 1.200 kata</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">restore</span> Pulihkan versi ini
+            </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Modal: Quick Quiz Generation Feedback -->
+<div class="fixed inset-0 bg-abyssal-slate/50 backdrop-blur-sm z-50 hidden items-center justify-center p-space-md" id="quiz-modal">
+<div class="bg-surface-card rounded-2xl max-w-lg w-full p-space-lg shadow-2xl flex flex-col gap-space-md animate-in fade-in zoom-in-95 duration-200">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-deep-teal">
+<span class="material-symbols-outlined text-[28px]">smart_toy</span>
+<span class="font-headline-sm text-headline-sm text-abyssal-slate">Generator Kuis Pintar</span>
+</div>
+<button class="text-on-surface-variant hover:text-abyssal-slate" id="close-modal-btn" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-xs">
+<p class="font-body-md text-body-md text-on-surface">AI sedang merancang paket latihan berdasarkan rangkuman:</p>
+<div class="p-space-sm rounded-lg bg-mint-subtle text-deep-teal font-label-md text-label-md">
+          "Ringkasan Inti Kalkulus: Aturan Rantai &amp; Integral Substitusi"
+        </div>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Analisis Kesulitan Rumus &amp; Distribusi Soal</span>
+<span class="text-emerald-accent font-semibold">10 Soal Pilihan Ganda</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+<div class="bg-deep-teal h-2 rounded-full w-4/5 animate-pulse"></div>
+</div>
+</div>
+<div class="flex justify-end gap-space-xs mt-2">
+<button class="px-space-md py-2 rounded-lg text-deep-teal font-label-md text-label-md hover:bg-mint-subtle" id="cancel-quiz-btn" type="button">
+          Batal
+        </button>
+<button class="flex items-center gap-1 px-space-md py-2 rounded-lg bg-deep-teal text-on-primary font-label-md text-label-md hover:bg-abyssal-slate shadow-sm" id="start-quiz-btn" type="button">
+<span>Mulai Simulasi Soal</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+    // Micro-interactions and interactive logic
+    document.addEventListener('DOMContentLoaded', () => {
+      // Summary length slider interaction
+      const slider = document.getElementById('summary-length-slider');
+      const lengthLabel = document.getElementById('length-label');
+      const lengthMap = {
+        '1': 'Ringkas (Intisari Cepat)',
+        '2': 'Seimbang (Sedang)',
+        '3': 'Mendalam (Detail Komprehensif)'
+      };
+
+      if (slider && lengthLabel) {
+        slider.addEventListener('input', (e) => {
+          lengthLabel.textContent = lengthMap[e.target.value] || 'Seimbang';
+        });
+      }
+
+      // Save Note feedback
+      const saveBtn = document.getElementById('btn-save-note');
+      const saveStatus = document.getElementById('save-status-text');
+      const syncBadge = document.getElementById('sync-badge');
+
+      if (saveBtn) {
+        saveBtn.addEventListener('click', () => {
+          const originalText = saveStatus.textContent;
+          saveStatus.textContent = 'Menyimpan...';
+          saveBtn.classList.add('opacity-75');
+
+          setTimeout(() => {
+            saveStatus.textContent = 'Tersimpan!';
+            saveBtn.classList.remove('opacity-75');
+            if (syncBadge) {
+              syncBadge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span><span>Disimpan Baru Saja</span>';
+            }
+            setTimeout(() => {
+              saveStatus.textContent = originalText;
+            }, 2000);
+          }, 600);
+        });
+      }
+
+      // AI Refresh animation feedback
+      const refreshBtn = document.getElementById('btn-refresh-ai');
+      if (refreshBtn) {
+        refreshBtn.addEventListener('click', () => {
+          const originalContent = refreshBtn.innerHTML;
+          refreshBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">progress_activity</span><span>Menganalisis Ulang Dokumen...</span>';
+          refreshBtn.disabled = true;
+
+          setTimeout(() => {
+            refreshBtn.innerHTML = originalContent;
+            refreshBtn.disabled = false;
+            alert('Rangkuman AI berhasil diperbarui sesuai preferensi terbaru!');
+          }, 1200);
+        });
+      }
+
+      // Highlight button micro-interaction
+      const highlightBtn = document.getElementById('btn-highlight');
+      if (highlightBtn) {
+        highlightBtn.addEventListener('click', () => {
+          const selection = window.getSelection();
+          if (selection && selection.toString().length > 0) {
+            alert('Potongan teks "' + selection.toString().substring(0, 30) + '..." telah ditandai dengan stabilo mint.');
+          } else {
+            alert('Sorot / blok kalimat pada teks ringkasan untuk mengaplikasikan stabilo mint.');
+          }
+        });
+      }
+
+      // Quiz Generator Modal Trigger
+      const quizBtn = document.getElementById('btn-generate-quiz');
+      const modal = document.getElementById('quiz-modal');
+      const closeModalBtn = document.getElementById('close-modal-btn');
+      const cancelQuizBtn = document.getElementById('cancel-quiz-btn');
+      const startQuizBtn = document.getElementById('start-quiz-btn');
+
+      function openModal() {
+        if (modal) {
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+        }
+      }
+
+      function closeModal() {
+        if (modal) {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        }
+      }
+
+      if (quizBtn) quizBtn.addEventListener('click', openModal);
+      if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+      if (cancelQuizBtn) cancelQuizBtn.addEventListener('click', closeModal);
+
+      if (startQuizBtn) {
+        startQuizBtn.addEventListener('click', () => {
+          closeModal();
+          alert('10 Soal kalkulus berhasil digenerate! Mengarahkan ke Modul Soal Latihan...');
+        });
+      }
+
+      // Export PDF mock
+      const exportPdfBtn = document.getElementById('btn-export-pdf');
+      if (exportPdfBtn) {
+        exportPdfBtn.addEventListener('click', () => {
+          alert('Membuat lembar catatan format PDF A4 beresolusi tinggi...');
+        });
+      }
+    });
+  </script>
+</div></main></div></body></html>

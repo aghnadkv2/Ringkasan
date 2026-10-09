@@ -1,0 +1,1 @@
+ALTER TABLE "materials" ADD COLUMN "category" text DEFAULT 'Belajar Mandiri' NOT NULL;

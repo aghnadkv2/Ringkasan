@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "surface-container-high": "#d2edf3",
+        "on-primary-container": "#8bc6c0",
+        "error": "#ba1a1a",
+        "on-primary-fixed": "#00201e",
+        "on-tertiary-fixed": "#00210b",
+        "surface-container-highest": "#cde7ee",
+        "primary-fixed-dim": "#96d2cb",
+        "error-container": "#ffdad6",
+        "on-secondary-container": "#0d704e",
+        "tertiary-fixed": "#bdefc3",
+        "on-secondary-fixed-variant": "#005237",
+        "surface-bg": "#F9FBFB",
+        "emerald-accent": "#2A835F",
+        "secondary-fixed": "#9df4c9",
+        "secondary-fixed-dim": "#82d8ae",
+        "surface": "#effcff",
+        "on-secondary": "#ffffff",
+        "inverse-on-surface": "#dbf5fc",
+        "surface-dim": "#c4dfe5",
+        "status-success": "#1B7E5A",
+        "on-primary": "#ffffff",
+        "surface-container-lowest": "#ffffff",
+        "surface-container": "#d8f3f9",
+        "on-surface": "#051f24",
+        "primary-fixed": "#b1eee7",
+        "on-error": "#ffffff",
+        "outline": "#707977",
+        "surface-tint": "#2b6862",
+        "on-surface-variant": "#3f4947",
+        "border-subtle": "#E1EAE7",
+        "tertiary-fixed-dim": "#a1d2a8",
+        "on-secondary-fixed": "#002114",
+        "on-primary-fixed-variant": "#0a504b",
+        "on-tertiary-fixed-variant": "#23502f",
+        "on-tertiary": "#ffffff",
+        "primary-container": "#12544f",
+        "status-error": "#C93B3B",
+        "status-warning": "#D9822B",
+        "mint-subtle": "#EBF4F0",
+        "on-error-container": "#93000a",
+        "on-tertiary-container": "#96c79d",
+        "inverse-surface": "#1c3439",
+        "primary": "#003c38",
+        "inverse-primary": "#96d2cb",
+        "outline-variant": "#bfc8c6",
+        "tertiary": "#0e3d1e",
+        "background": "#effcff",
+        "surface-container-low": "#def8ff",
+        "tertiary-container": "#285433",
+        "surface-variant": "#cde7ee",
+        "deep-teal": "#12544F",
+        "secondary": "#026c4a",
+        "secondary-container": "#9bf1c6",
+        "abyssal-slate": "#092328",
+        "on-background": "#051f24",
+        "surface-bright": "#effcff",
+        "soft-mint": "#8BBB92",
+        "surface-card": "#FFFFFF"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-xl": "2.5rem",
+        "margin-mobile": "1rem",
+        "space-sm": "0.5rem",
+        "margin": "2rem",
+        "space-xs": "0.25rem",
+        "gutter-mobile": "1rem",
+        "space-lg": "1.5rem",
+        "space-md": "1rem",
+        "gutter": "1.5rem"
+      },
+      "fontFamily": {
+        "body-md": ["Plus Jakarta Sans"],
+        "label-md": ["Plus Jakarta Sans"],
+        "display-hero-mobile": ["Plus Jakarta Sans"],
+        "headline-sm": ["Plus Jakarta Sans"],
+        "label-lg": ["Plus Jakarta Sans"],
+        "headline-lg": ["Plus Jakarta Sans"],
+        "label-sm": ["Plus Jakarta Sans"],
+        "body-sm": ["Plus Jakarta Sans"],
+        "headline-lg-mobile": ["Plus Jakarta Sans"],
+        "display-hero": ["Plus Jakarta Sans"],
+        "body-lg": ["Plus Jakarta Sans"],
+        "headline-md": ["Plus Jakarta Sans"]
+      },
+      "fontSize": {
+        "body-md": ["14px", {"lineHeight": "22px", "fontWeight": "400"}],
+        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+        "display-hero-mobile": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+        "headline-sm": ["16px", {"lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600"}],
+        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+        "headline-lg": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+        "label-sm": ["10px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+        "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}],
+        "headline-lg-mobile": ["22px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "display-hero": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "body-lg": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+        "headline-md": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+      }
+    }
+  }
+}</script></head><body class="bg-surface-bg font-body-md text-on-surface antialiased selection:bg-mint-subtle selection:text-deep-teal"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-card shadow-[0_1px_8px_rgba(9,35,40,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-card"><img alt="Catatan Ujian Pintar Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXaXRLpDjvKbK3tEb73pL4qqHH3j1ZTxRt3m48UbjQgAgyTFdBFfBMnqYinZrQOZtN-4MZB263p_npbVus2V6seARkCvCfGXIvGoGpBU6utaRjvlVado2gldApMM46Bcm1ZUnM7sRvYRf-iYkj7HyoPAi4_OzbE-lX3tPQFEr83o8X4x-LnfIwifOsQxZTcg175QCagpXfElq9qVp-ZQEOjhFFsxikwTEyLVzqYrlW4pvYs6kKFifR"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-abyssal-slate tracking-tight">Catatan Ujian</span><span class="font-label-sm text-label-sm text-emerald-accent -mt-space-xs">Pintar Platform</span></div></div><div class="px-space-md pt-space-sm pb-space-xs"><button class="w-full flex items-center justify-between px-space-md py-space-sm rounded-lg bg-surface text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" type="button"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-outline text-[18px]">search</span><span class="font-body-sm text-body-sm">Cari catatan / soal...</span></div><kbd class="px-1.5 py-0.5 rounded bg-surface-card text-on-surface-variant font-label-sm text-label-sm shadow-[0_1px_2px_rgba(9,35,40,0.06)]">⌘K</kbd></button></div><nav class="flex flex-col gap-space-xs px-space-md mt-space-sm" data-active-classes="bg-mint-subtle text-deep-teal font-label-lg rounded-lg shadow-[0_1px_4px_rgba(18,84,79,0.06)]"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-mint-subtle hover:text-deep-teal transition-all font-body-md text-body-md" data-path="dashboard-ringkasan" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard / Ringkasan</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-all bg-mint-subtle text-deep-teal font-label-lg rounded-lg shadow-[0_1px_4px_rgba(18,84,79,0.06)]" data-path="materi-belajar" href="#"><span class="material-symbols-outlined text-[20px]">folder_open</span><span>Materi Belajar</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-mint-subtle hover:text-deep-teal transition-all font-body-md text-body-md" data-path="rangkuman-dan-catatan" href="#"><span class="material-symbols-outlined text-[20px]">auto_awesome</span><span>Rangkuman &amp; Catatan</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-mint-subtle hover:text-deep-teal transition-all font-body-md text-body-md" data-path="soal-latihan" href="#"><span class="material-symbols-outlined text-[20px]">assignment_turned_in</span><span>Soal Latihan</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-mint-subtle hover:text-deep-teal transition-all font-body-md text-body-md" data-path="jadwal-belajar" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span>Jadwal Belajar</span></a></nav></div><div class="p-space-md flex flex-col gap-space-xs bg-surface-card"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-mint-subtle text-deep-teal font-label-lg rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-mint-subtle hover:text-deep-teal transition-all font-body-md text-body-md" data-path="pengaturan" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Pengaturan</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-status-error hover:bg-error-container hover:text-on-error-container transition-all font-body-md text-body-md" data-path="login" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span>Keluar</span></a></nav><div class="mt-space-sm p-space-sm rounded-xl bg-surface flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-status-success animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Mode Fokus Aktif</span></div><span class="font-label-sm text-label-sm text-emerald-accent font-semibold">v2.4</span></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-card/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(9,35,40,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><nav class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><span class="hover:text-deep-teal cursor-pointer">Akademik</span><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><span class="font-label-md text-label-md text-abyssal-slate">Portal Belajar</span></nav><div class="h-4 w-[1px] bg-border-subtle hidden sm:block"></div><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-mint-subtle"><span class="material-symbols-outlined text-deep-teal text-[16px]">alarm</span><span class="font-label-md text-label-md text-deep-teal">UTBK / Ujian Akhir:</span><span class="font-label-md text-label-md text-emerald-accent font-bold">14 Hari Lagi</span></div></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-space-xs px-space-md h-10 rounded-lg bg-deep-teal hover:bg-abyssal-slate text-on-primary font-label-lg text-label-lg shadow-[0_2px_8px_-2px_rgba(18,84,79,0.25)] transition-all" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Tambah Materi</span></button><button class="relative w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface hover:text-on-surface transition-all" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-status-error ring-2 ring-surface-card"></span></button><div class="h-6 w-[1px] bg-border-subtle"></div><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-soft-mint" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkWR1s55UeQ8-UkpZwtyi8eroCKlr0y5d7tyE0b27i7DiFqdzfRcYBDkl6oTfiA_TsC3A3-LN73gUDmP8lvmL7CbnLj8c1NOC7zIWYeATnwgMxmWEjvMxreGg5vJIG0sODnTAyvvuOIqbjDuXrdGfMoXA9bYD4YE37t1Ea-1I56uFXOySlICEqALhQupMEydBkxeDp-q8YnI6hA5-hu1ta8GClMsO0_y_GMAUGMBof7H64XvTw3Xvo"/><div class="hidden xl:flex flex-col text-left"><span class="font-label-md text-label-md text-abyssal-slate leading-tight">Rian Pratama</span><span class="font-label-sm text-label-sm text-emerald-accent">Mahasiswa</span></div></div></div></header><main class="relative pt-16 w-full flex-1 bg-surface-bg px-space-lg py-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- Top Breadcrumb & Page Banner Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-card p-space-lg rounded-xl shadow-[0_2px_8px_-2px_rgba(9,35,40,0.05)]">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-mint-subtle text-deep-teal font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-accent animate-pulse"></span>
+          MODUL FR-01: INPUT REPOSITORY
+        </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">• 24 Dokumen Tersinkronisasi</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-abyssal-slate tracking-tight">
+        Manajemen &amp; Input Sumber Belajar
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Pusat penyimpanan dokumen referensi, artikel web, dan diktat kuliah untuk diekstraksi menjadi rangkuman cerdas dan bank soal latihan adaptif.
+      </p>
+</div>
+<!-- Quick Action Triggers -->
+<div class="flex flex-wrap items-center gap-space-sm shrink-0">
+<button class="inline-flex items-center gap-space-xs px-space-md h-11 rounded-lg bg-mint-subtle hover:bg-surface-container text-deep-teal font-label-lg text-label-lg transition-all shadow-sm" id="btnOpenUrlModal" type="button">
+<span class="material-symbols-outlined text-[18px]">link</span>
+<span>+ Tambah Tautan Web</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-lg h-11 rounded-lg bg-deep-teal hover:bg-abyssal-slate text-on-primary font-label-lg text-label-lg transition-all shadow-[0_4px_12px_rgba(18,84,79,0.2)]" id="btnTriggerUpload" type="button">
+<span class="material-symbols-outlined text-[20px]">upload_file</span>
+<span>+ Unggah File (PDF, DOCX)</span>
+</button>
+</div>
+</div>
+<!-- Dual Input Area: Drag & Drop + URL Extractor Banner -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Dropzone Area (8 Cols) -->
+<div class="lg:col-span-8 bg-surface-card rounded-xl p-space-lg shadow-[0_2px_8px_-2px_rgba(9,35,40,0.05)] flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-deep-teal text-[22px]">cloud_upload</span>
+<span class="font-headline-sm text-headline-sm text-abyssal-slate">Unggah Berkas Materi Ajar</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface px-2 py-1 rounded">Maksimal 25 MB per berkas</span>
+</div>
+<div class="relative group my-space-xs flex flex-col items-center justify-center p-space-xl rounded-xl bg-surface-bg hover:bg-mint-subtle/50 transition-all cursor-pointer text-center" id="dropZone">
+<!-- Visual dashed indicator using tailwind background and styled SVG -->
+<input accept=".pdf,.docx,.txt" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" id="fileInput" multiple="" type="file"/>
+<div class="w-16 h-16 rounded-2xl bg-mint-subtle flex items-center justify-center text-deep-teal group-hover:scale-110 transition-transform mb-space-sm shadow-sm">
+<span class="material-symbols-outlined text-[36px]">drive_folder_upload</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-abyssal-slate mb-1">
+          Tarik &amp; lepas berkas modul ke sini, atau <span class="text-deep-teal underline decoration-2">telusuri komputer</span>
+</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+          Mendukung format portabel cerdas: <strong class="text-abyssal-slate">PDF</strong>, <strong class="text-abyssal-slate">DOCX</strong>, dan teks murni <strong class="text-abyssal-slate">TXT</strong>. AI otomatis memetakan bab &amp; istilah kunci.
+        </p>
+<!-- Allowed Extension Pills -->
+<div class="flex items-center gap-space-xs mt-space-md">
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-deep-teal">PDF v1.7+</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-deep-teal">DOCX Office</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-deep-teal">Markdown / TXT</span>
+</div>
+</div>
+<!-- Live Mock Upload Status Strip (Conditional/Demonstrative) -->
+<div class="flex items-center justify-between pt-space-sm bg-mint-subtle/40 px-space-md py-space-sm rounded-lg mt-space-xs" id="uploadProgressContainer">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-emerald-accent text-[20px]">task_alt</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-abyssal-slate">OCR Engine Siap</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ekstraksi teks otomatis &amp; deteksi formula LaTeX aktif</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-deep-teal font-semibold">Tingkat Akurasi 99.4%</span>
+</div>
+</div>
+</div>
+<!-- Quick URL Extractor & System Health (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Direct URL Scraper Card -->
+<div class="bg-surface-card rounded-xl p-space-md shadow-[0_2px_8px_-2px_rgba(9,35,40,0.05)] flex flex-col justify-between flex-1">
+<div>
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="material-symbols-outlined text-deep-teal text-[20px]">public</span>
+<span class="font-headline-sm text-headline-sm text-abyssal-slate">Ekstrak Tautan Web</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+            Konversi artikel jurnal, ensiklopedia edukasi, atau catatan online ke teks bersih bebas iklan.
+          </p>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="urlInput">URL SUMBER DOKUMEN</label>
+<div class="flex items-center bg-surface-bg rounded-lg px-3 py-1.5 focus-within:bg-surface-card shadow-inner">
+<span class="material-symbols-outlined text-outline text-[18px] mr-2">link</span>
+<input class="w-full bg-transparent text-body-sm font-body-sm text-abyssal-slate focus:outline-none placeholder:text-outline" id="urlInput" placeholder="https://id.wikipedia.org/wiki/..." type="url"/>
+</div>
+</div>
+</div>
+<button class="w-full mt-space-md h-10 rounded-lg bg-mint-subtle hover:bg-deep-teal hover:text-on-primary text-deep-teal font-label-lg text-label-lg transition-all flex items-center justify-center gap-space-xs" id="btnFetchUrl" type="button">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+<span>Ambil Konten Materi</span>
+</button>
+</div>
+<!-- Cloud Storage Utilization Mini-Card -->
+<div class="bg-surface-card rounded-xl p-space-md shadow-[0_2px_8px_-2px_rgba(9,35,40,0.05)] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Kapasitas Penyimpanan</span>
+<span class="font-label-sm text-label-sm text-emerald-accent font-bold">1.8 GB / 5.0 GB</span>
+</div>
+<!-- Custom Progress Bar -->
+<div class="w-full bg-border-subtle rounded-full h-2 overflow-hidden">
+<div class="bg-emerald-accent h-2 rounded-full" style="width: 36%;"></div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>Tersisa 3.2 GB</span>
+<span class="text-deep-teal font-semibold">Tier Pintar Edu</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Search & Category Filters Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-card p-space-md rounded-xl shadow-[0_2px_8px_-2px_rgba(9,35,40,0.05)]">
+<!-- Interactive Category Pills -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 md:pb-0" id="filterTabsContainer">
+<button class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-deep-teal text-on-primary transition-all shadow-sm" data-filter="all" type="button">
+        Semua Materi (24)
+      </button>
+<button class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface text-on-surface-variant hover:bg-mint-subtle hover:text-deep-teal transition-all" data-filter="kuliah" type="button">
+        Kuliah / Sekolah
+      </button>
+<button class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface text-on-surface-variant hover:bg-mint-subtle hover:text-deep-teal transition-all" data-filter="utbk" type="button">
+        Ujian Masuk / UTBK
+      </button>
+<button class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface text-on-surface-variant hover:bg-mint-subtle hover:text-deep-teal transition-all" data-filter="mandiri" type="button">
+        Belajar Mandiri
+      </button>
+<button class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface text-on-surface-variant hover:bg-mint-subtle hover:text-deep-teal transition-all" data-filter="ai-processed" type="button">
+        Diproses AI (18)
+      </button>
+</div>
+<!-- Search Input & View Toggle -->
+<div class="flex items-center gap-space-sm w-full md:w-auto">
+<div class="relative w-full md:w-72">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">search</span>
+<input class="w-full bg-surface-bg pl-9 pr-3 py-2 rounded-lg text-body-sm font-body-sm text-abyssal-slate focus:bg-surface-card focus:outline-none placeholder:text-outline shadow-inner" id="searchInput" placeholder="Cari judul materi atau sumber..." type="text"/>
+</div>
+<button class="p-2 rounded-lg bg-surface text-on-surface-variant hover:text-deep-teal hover:bg-mint-subtle transition-all" title="Susun Berdasarkan" type="button">
+<span class="material-symbols-outlined text-[20px]">sort</span>
+</button>
+</div>
+</div>
+<!-- Primary Content Grid: Main Materials (Col 8) + Live Processing Activity Queue (Col 4) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Material Cards Grid (8 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-md" id="materialList">
+<!-- Card 1: Kalkulus Integral & Diferensial.pdf -->
+<div class="bg-surface-card rounded-xl p-space-md shadow-[0_2px_8px_-2px_rgba(9,35,40,0.05)] hover:shadow-[0_6px_16px_-2px_rgba(18,84,79,0.1)] transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md group">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-12 h-12 rounded-xl bg-mint-subtle flex items-center justify-center text-deep-teal shrink-0 group-hover:bg-deep-teal group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[26px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap mb-1">
+<span class="px-2 py-0.5 rounded-full bg-mint-subtle text-deep-teal font-label-sm text-label-sm">Matematika IPA</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-deep-teal font-label-sm text-label-sm font-medium">Siap Dirangkum</span>
+<span class="font-body-sm text-body-sm text-outline">• 4.2 MB</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-abyssal-slate truncate group-hover:text-deep-teal transition-colors">
+              Kalkulus Integral &amp; Diferensial.pdf
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">
+              Diunggah 2 hari lalu • 48 Halaman • Teorema Dasar Kalkulus, Metode Substitusi, Integrasi Parsial
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0 self-end sm:self-center">
+<button class="px-space-md h-9 rounded-lg bg-deep-teal text-on-primary hover:bg-abyssal-slate font-label-md text-label-md transition-all flex items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+<span>Rangkum AI</span>
+</button>
+<button class="px-space-md h-9 rounded-lg bg-surface text-deep-teal hover:bg-mint-subtle font-label-md text-label-md transition-all flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">quiz</span>
+<span>Buat Soal</span>
+</button>
+<button class="p-2 rounded-lg text-on-surface-variant hover:text-deep-teal hover:bg-surface transition-all" title="Detail Dokumen" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Struktur Sel & Enzim Metabolisme (URL) -->
+<div class="bg-surface-card rounded-xl p-space-md shadow-[0_2px_8px_-2px_rgba(9,35,40,0.05)] hover:shadow-[0_6px_16px_-2px_rgba(18,84,79,0.1)] transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md group">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-emerald-accent shrink-0 group-hover:bg-emerald-accent group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[26px]">language</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap mb-1">
+<span class="px-2 py-0.5 rounded-full bg-mint-subtle text-deep-teal font-label-sm text-label-sm">Biologi Sel</span>
+<span class="px-2 py-0.5 rounded-full bg-emerald-accent/15 text-status-success font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Telah Dirangkum
+              </span>
+<span class="font-body-sm text-body-sm text-outline">• Artikel Web (Jurnal Edu)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-abyssal-slate truncate group-hover:text-deep-teal transition-colors">
+              Struktur Sel &amp; Enzim Metabolisme (Wikipedia &amp; Nature Edu)
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">
+              Diambil kemarin • 3.420 Kata • Telah diekstrak menjadi 1 rangkuman &amp; 15 flashcard aktif
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0 self-end sm:self-center">
+<button class="px-space-md h-9 rounded-lg bg-surface text-deep-teal hover:bg-mint-subtle font-label-md text-label-md transition-all flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+<span>Buka Rangkuman</span>
+</button>
+<button class="px-space-md h-9 rounded-lg bg-surface text-deep-teal hover:bg-mint-subtle font-label-md text-label-md transition-all flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">assignment_turned_in</span>
+<span>Uji Pemahaman</span>
+</button>
+<button class="p-2 rounded-lg text-on-surface-variant hover:text-deep-teal hover:bg-surface transition-all" title="Detail Dokumen" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Card 3: Mekanika Klasik & Hukum Newton.pdf -->
+<div class="bg-surface-card rounded-xl p-space-md shadow-[0_2px_8px_-2px_rgba(9,35,40,0.05)] hover:shadow-[0_6px_16px_-2px_rgba(18,84,79,0.1)] transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md group">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-12 h-12 rounded-xl bg-mint-subtle flex items-center justify-center text-deep-teal shrink-0 group-hover:bg-deep-teal group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[26px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap mb-1">
+<span class="px-2 py-0.5 rounded-full bg-mint-subtle text-deep-teal font-label-sm text-label-sm">Fisika Dasar</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">Terproses</span>
+<span class="font-body-sm text-body-sm text-outline">• 6.8 MB</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-abyssal-slate truncate group-hover:text-deep-teal transition-colors">
+              Mekanika Klasik &amp; Hukum Newton.pdf
+            </h3>
+<div class="flex items-center gap-space-sm mt-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-emerald-accent text-[16px]">verified</span>
+<span class="font-label-sm text-label-sm text-abyssal-slate font-semibold">Skor Pemahaman AI: 85%</span>
+</div>
+<span class="text-outline">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tersedia 20 Bank Soal UTBK</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0 self-end sm:self-center">
+<button class="px-space-md h-9 rounded-lg bg-deep-teal text-on-primary hover:bg-abyssal-slate font-label-md text-label-md transition-all flex items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">model_training</span>
+<span>Latihan Kuis</span>
+</button>
+<button class="px-space-md h-9 rounded-lg bg-surface text-deep-teal hover:bg-mint-subtle font-label-md text-label-md transition-all flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">description</span>
+<span>Rangkuman</span>
+</button>
+<button class="p-2 rounded-lg text-on-surface-variant hover:text-deep-teal hover:bg-surface transition-all" title="Detail Dokumen" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Card 4: Pengantar Manajemen Bisnis & Pemasaran.docx -->
+<div class="bg-surface-card rounded-xl p-space-md shadow-[0_2px_8px_-2px_rgba(9,35,40,0.05)] hover:shadow-[0_6px_16px_-2px_rgba(18,84,79,0.1)] transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md group">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary-container shrink-0 group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[26px]">article</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap mb-1">
+<span class="px-2 py-0.5 rounded-full bg-mint-subtle text-deep-teal font-label-sm text-label-sm">Manajemen</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-deep-teal font-label-sm text-label-sm font-medium">Siap Olah</span>
+<span class="font-body-sm text-body-sm text-outline">• 1.9 MB</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-abyssal-slate truncate group-hover:text-deep-teal transition-colors">
+              Pengantar Manajemen Bisnis &amp; Pemasaran.docx
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">
+              Diunggah 3 hari lalu • Modul Bab 1-4 • Segmentasi Pasar, Bauran Pemasaran 4P, Porter Analysis
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0 self-end sm:self-center">
+<button class="px-space-md h-9 rounded-lg bg-deep-teal text-on-primary hover:bg-abyssal-slate font-label-md text-label-md transition-all flex items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+<span>Rangkum AI</span>
+</button>
+<button class="px-space-md h-9 rounded-lg bg-surface text-deep-teal hover:bg-mint-subtle font-label-md text-label-md transition-all flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">quiz</span>
+<span>Buat Soal</span>
+</button>
+<button class="p-2 rounded-lg text-on-surface-variant hover:text-deep-teal hover:bg-surface transition-all" title="Detail Dokumen" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right Side Panel: Processing Status & Visual Overview (4 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Live Processing Queue Card -->
+<div class="bg-surface-card rounded-xl p-space-md shadow-[0_2px_8px_-2px_rgba(9,35,40,0.05)] flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-deep-teal text-[20px]">sync</span>
+<h4 class="font-headline-sm text-headline-sm text-abyssal-slate">Status Ekstraksi AI</h4>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-mint-subtle text-deep-teal font-label-sm text-label-sm">Real-time</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Item 1: Completed Task -->
+<div class="p-space-sm rounded-lg bg-surface-bg flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-emerald-accent/20 flex items-center justify-center text-status-success shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-md text-label-md text-abyssal-slate truncate">Mekanika Klasik &amp; Newton</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ekstraksi bab selesai (100%)</span>
+<span class="font-label-sm text-label-sm text-status-success mt-0.5">Berhasil diubah jadi ringkasan</span>
+</div>
+</div>
+<!-- Item 2: Running Task -->
+<div class="p-space-sm rounded-lg bg-mint-subtle/50 flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-deep-teal/20 flex items-center justify-center text-deep-teal shrink-0 mt-0.5 animate-spin">
+<span class="material-symbols-outlined text-[18px]">progress_activity</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-md text-label-md text-abyssal-slate truncate">Ringkasan Kimia Organik.pdf</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Memindai rumus ikatan C-H...</span>
+<!-- Mini Bar -->
+<div class="w-full bg-border-subtle rounded-full h-1.5 mt-1 overflow-hidden">
+<div class="bg-deep-teal h-1.5 rounded-full" style="width: 64%;"></div>
+</div>
+</div>
+</div>
+<!-- Item 3: Completed Web scrape -->
+<div class="p-space-sm rounded-lg bg-surface-bg flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-emerald-accent/20 flex items-center justify-center text-status-success shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-md text-label-md text-abyssal-slate truncate">Struktur Sel Biologi</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Parsed 14 gambar &amp; 3 bagan</span>
+<span class="font-label-sm text-label-sm text-status-success mt-0.5">Sinkronisasi cloud siap</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Tips & Pedoman Input Materi -->
+<div class="bg-surface-card rounded-xl p-space-md shadow-[0_2px_8px_-2px_rgba(9,35,40,0.05)] flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-deep-teal">
+<span class="material-symbols-outlined text-[20px]">lightbulb</span>
+<span class="font-headline-sm text-headline-sm text-abyssal-slate">Tips Bahan Ujian Efektif</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Unggah silabus ujian atau bank soal tahun lalu dalam satu berkas untuk hasil rangkuman prediktif dengan tingkat akurasi materi target hingga 90%.
+        </p>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<a class="font-label-md text-label-md text-deep-teal hover:underline flex items-center gap-1" href="#">
+<span>Pelajari pedoman format berkas</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Study Session Visual Card with photo integration -->
+<div class="relative overflow-hidden rounded-xl bg-surface-card shadow-[0_2px_8px_-2px_rgba(9,35,40,0.05)] flex flex-col">
+<img class="w-full h-36 object-cover" data-alt="Modern minimalist study desk with a laptop, digital stylus, notebook open with mathematical formulas, and a botanical potted plant in soft natural morning sunlight with deep teal and sage accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0NJ9iaubS0_J0nh9tvnf6dbiE21UGUsiAKPHMwJAXNTleuG2tVfNT3pMUkZlLZD4ioz7KLfcoF5XcbO5u-kTJyztK8zNpdGmPCC_mC0E04RVKhSSzsCGXKfkVeC25r_C-j6qO08Hka71IIlsVi7aLeApwuSOzb40EDSUQl6--fIgetUrFvvgKjqGnoX90MuFigYwmkx6d9WpFq4_IW--ZMeLSkSXysdyNUBNeCgqK6iLn6KpIk8fQ"/>
+<div class="p-space-md flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-emerald-accent uppercase font-bold tracking-wider">Mode Fokus Cerdas</span>
+<span class="font-headline-sm text-headline-sm text-abyssal-slate">Jadwalkan Sesi Ujian</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Ujian akhir semester tinggal 14 hari. Buat simulasi try-out otomatis dari materi di atas sekarang.
+          </p>
+<button class="mt-space-sm w-full h-9 rounded-lg bg-surface text-deep-teal hover:bg-mint-subtle font-label-md text-label-md transition-all flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+<span>Mulai Simulasi Kuis</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Modal: Tambah Tautan Web (Hidden by default, triggered by JS) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-abyssal-slate/40 backdrop-blur-sm hidden transition-opacity" id="modalUrl">
+<div class="bg-surface-card rounded-2xl w-full max-w-lg p-space-lg shadow-[0_12px_32px_-4px_rgba(9,35,40,0.25)] flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-xl bg-mint-subtle flex items-center justify-center text-deep-teal">
+<span class="material-symbols-outlined text-[24px]">add_link</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-abyssal-slate">Input Tautan Materi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Impor artikel online atau materi dari web luar</p>
+</div>
+</div>
+<button class="p-1.5 rounded-lg text-outline hover:text-abyssal-slate hover:bg-surface" id="btnCloseUrlModal" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-sm">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="modalUrlField">URL ALAMAT SITUS</label>
+<input class="w-full bg-surface-bg px-3 py-2.5 rounded-lg text-body-md font-body-md text-abyssal-slate focus:bg-surface-card focus:outline-none shadow-inner" id="modalUrlField" placeholder="https://contoh-jurnal.ac.id/artikel/biologi" type="url"/>
+<label class="font-label-sm text-label-sm text-on-surface-variant mt-2" for="modalCategorySelect">KATEGORI MATA PELAJARAN / KULIAH</label>
+<select class="w-full bg-surface-bg px-3 py-2.5 rounded-lg text-body-md font-body-md text-abyssal-slate focus:bg-surface-card focus:outline-none shadow-inner" id="modalCategorySelect">
+<option value="matematika">Matematika &amp; Sains</option>
+<option value="biologi">Biologi &amp; Kedokteran</option>
+<option value="fisika">Fisika Dasar</option>
+<option value="manajemen">Bisnis &amp; Manajemen</option>
+<option value="utbk">Persiapan UTBK / SBMPTN</option>
+</select>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md h-10 rounded-lg text-on-surface-variant hover:bg-surface font-label-md text-label-md" id="btnCancelUrlModal" type="button">
+          Batal
+        </button>
+<button class="px-space-lg h-10 rounded-lg bg-deep-teal hover:bg-abyssal-slate text-on-primary font-label-lg text-label-lg flex items-center gap-1 shadow-sm" id="btnSubmitUrlModal" type="button">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Proses Tautan Sekarang</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+    // Tab Filter Interaction
+    const filterButtons = document.querySelectorAll('#filterTabsContainer button');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.className = 'px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface text-on-surface-variant hover:bg-mint-subtle hover:text-deep-teal transition-all';
+        });
+        btn.className = 'px-space-md py-1.5 rounded-full font-label-md text-label-md bg-deep-teal text-on-primary transition-all shadow-sm';
+      });
+    });
+
+    // Modal Tautan Web
+    const modalUrl = document.getElementById('modalUrl');
+    const btnOpenUrl = document.getElementById('btnOpenUrlModal');
+    const btnCloseUrl = document.getElementById('btnCloseUrlModal');
+    const btnCancelUrl = document.getElementById('btnCancelUrlModal');
+    const btnSubmitUrl = document.getElementById('btnSubmitUrlModal');
+
+    function openModal() {
+      modalUrl.classList.remove('hidden');
+    }
+    function closeModal() {
+      modalUrl.classList.add('hidden');
+    }
+
+    if (btnOpenUrl) btnOpenUrl.addEventListener('click', openModal);
+    if (btnCloseUrl) btnCloseUrl.addEventListener('click', closeModal);
+    if (btnCancelUrl) btnCancelUrl.addEventListener('click', closeModal);
+    if (btnSubmitUrl) {
+      btnSubmitUrl.addEventListener('click', () => {
+        closeModal();
+      });
+    }
+
+    // Drag and Drop feedback micro-interaction
+    const dropZone = document.getElementById('dropZone');
+    const fileInput = document.getElementById('fileInput');
+
+    if (dropZone && fileInput) {
+      ['dragenter', 'dragover'].forEach(eventName => {
+        dropZone.addEventListener(eventName, (e) => {
+          e.preventDefault();
+          dropZone.classList.add('bg-mint-subtle');
+        }, false);
+      });
+
+      ['dragleave', 'drop'].forEach(eventName => {
+        dropZone.addEventListener(eventName, (e) => {
+          e.preventDefault();
+          dropZone.classList.remove('bg-mint-subtle');
+        }, false);
+      });
+
+      fileInput.addEventListener('change', (e) => {
+        if (e.target.files && e.target.files.length > 0) {
+          const fileName = e.target.files[0].name;
+          const progressStrip = document.getElementById('uploadProgressContainer');
+          if (progressStrip) {
+            progressStrip.innerHTML = `
+              <div class="flex items-center gap-space-sm">
+                <span class="material-symbols-outlined text-deep-teal text-[20px] animate-spin">sync</span>
+                <div class="flex flex-col">
+                  <span class="font-label-md text-label-md text-abyssal-slate">Mengunggah: ${fileName}</span>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant">Memproses ekstraksi teks berkas...</span>
+                </div>
+              </div>
+              <span class="font-label-sm text-label-sm text-deep-teal font-semibold">Sedang Diproses</span>
+            `;
+          }
+        }
+      });
+    }
+
+    // Trigger Upload Button Click
+    const btnTriggerUpload = document.getElementById('btnTriggerUpload');
+    if (btnTriggerUpload && fileInput) {
+      btnTriggerUpload.addEventListener('click', () => {
+        fileInput.click();
+      });
+    }
+
+    // Fetch URL from inline input
+    const btnFetchUrl = document.getElementById('btnFetchUrl');
+    const urlInput = document.getElementById('urlInput');
+    if (btnFetchUrl && urlInput) {
+      btnFetchUrl.addEventListener('click', () => {
+        if (urlInput.value.trim() !== '') {
+          btnFetchUrl.innerHTML = `<span class="material-symbols-outlined text-[18px] animate-spin">sync</span><span>Mengekstrak Konten...</span>`;
+          setTimeout(() => {
+            btnFetchUrl.innerHTML = `<span class="material-symbols-outlined text-[18px]">check_circle</span><span>Tersimpan ke Dokumen</span>`;
+            urlInput.value = '';
+          }, 1200);
+        } else {
+          urlInput.focus();
+        }
+      });
+    }
+
+    // Search filter mock
+    const searchInput = document.getElementById('searchInput');
+    const materialList = document.getElementById('materialList');
+    if (searchInput && materialList) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase();
+        const cards = materialList.querySelectorAll('.group');
+        cards.forEach(card => {
+          const text = card.textContent.toLowerCase();
+          if (text.includes(query)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    }
+  </script>
+</div></main></div></body></html>

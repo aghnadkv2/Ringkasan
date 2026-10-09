@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 150 22% 97%;
+  --foreground: 190 22% 14%;
+  --card: 0 0% 100%;
+  --primary: 174 73% 18%;
+  --muted: 150 18% 95%;
+  --border: 150 13% 89%;
+  --accent: 173 40% 94%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: #f6f9f8;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: #172b2c;
+  background: #f6f9f8;
+  font-family: Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: #c7e8df;
+  color: #103f3b;
+}
+
+.scrollbar-hidden {
+  scrollbar-width: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.dark-mode,
+.dark-mode main {
+  background: #101b1a !important;
+  color: #e4efec;
+}
+
+.dark-mode aside,
+.dark-mode header,
+.dark-mode [class~="bg-white"] {
+  background-color: #172624 !important;
+  border-color: #29413c !important;
+  color: #e4efec;
+}
+
+.dark-mode [class*="text-slate-900"],
+.dark-mode [class*="text-slate-800"],
+.dark-mode [class*="text-slate-700"],
+.dark-mode [class*="text-slate-600"] {
+  color: #d1e2de !important;
+}
+
+.dark-mode [class*="text-slate-500"],
+.dark-mode [class*="text-slate-400"] {
+  color: #9ab1aa !important;
+}
+
+.dark-mode [class*="border-slate-100"],
+.dark-mode [class*="border-slate-200"] {
+  border-color: #29413c !important;
+}
+
+.dark-mode [class*="bg-slate-50"],
+.dark-mode [class*="bg-slate-100"] {
+  background-color: #203431 !important;
+}

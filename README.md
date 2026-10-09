@@ -48,6 +48,8 @@ Register with a JSON `POST` body such as:
 
 If signup returns `503`, check that `.env.local` contains a real `DATABASE_URL` and a unique `BETTER_AUTH_SECRET` with at least 32 characters, and that PostgreSQL is reachable. Apply the migrations before registering. A browser message that the server cannot be reached means the Next.js app is not running at the configured URL.
 
+For Vercel, set `DATABASE_URL`, `BETTER_AUTH_SECRET`, and `BETTER_AUTH_URL` in the Production environment, then redeploy and apply the Drizzle migrations to that database. Use the canonical production site origin for `BETTER_AUTH_URL`; the app also trusts Vercel's production domain and the current deployment URL.
+
 After signing in, use the session cookie for study-data requests. API route handlers return `401` when no valid session is present. Keep `BETTER_AUTH_SECRET` private and use a strong, unique value outside local development.
 
 ## API
